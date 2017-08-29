@@ -1,4 +1,4 @@
-# CountriesViewController - A view controller that allow user to select a countries. It supports single or multiple mode
+# CountriesViewController - A view controller that allow user to select a countries. It supports single or multiple selection
 <p align="center" >
   <img src="https://user-images.githubusercontent.com/16253548/29821924-f965e95e-8cc9-11e7-903a-2ae95269a6f3.png" width=400px alt="CountriesViewController" title="CountriesViewController">
 </p>
