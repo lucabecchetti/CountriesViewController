@@ -101,7 +101,7 @@ extension YourViewController : CountriesViewControllerDelegate{
 
     func countriesViewControllerDidCancel(_ countriesViewController: CountriesViewController) {
         
-        results.text = "user hass been tap cancel\n"
+        print("user hass been tap cancel")
         
     }
     
