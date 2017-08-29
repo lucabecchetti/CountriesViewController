@@ -55,16 +55,6 @@ public final class CountriesViewController: UIViewController, UISearchBarDelegat
     }()
     
     /// Calculate the nav bar height if present
-    var navBarHeight:CGFloat{
-        get{
-            if (self.navigationController != nil) {
-                return self.navigationController!.navigationBar.frame.size.height + (UIApplication.shared.isStatusBarHidden ? 0 : 20)
-            }else{
-                return 0
-            }
-        }
-    }
-    
     var cancelButton    : UIBarButtonItem!
     var doneButton      : UIBarButtonItem?
     
@@ -113,7 +103,7 @@ public final class CountriesViewController: UIViewController, UISearchBarDelegat
         )
         //constraint for stackview
         let stackView_V = NSLayoutConstraint.constraints(
-            withVisualFormat: "V:|-\(navBarHeight)-[stackView]-0-|",
+            withVisualFormat: "V:|-[stackView]-0-|",
             options: NSLayoutFormatOptions(rawValue:0),
             metrics: nil,
             views: viewsDictionary
@@ -131,6 +121,8 @@ public final class CountriesViewController: UIViewController, UISearchBarDelegat
         
         /// Setup controller
         setupCountries()
+        
+        self.edgesForExtendedLayout = []
         
     }
     
