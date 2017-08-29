@@ -3,7 +3,7 @@
   <img src="https://user-images.githubusercontent.com/16253548/29821924-f965e95e-8cc9-11e7-903a-2ae95269a6f3.png" width=400px alt="CountriesViewController" title="CountriesViewController">
 </p>
 
-[![Version](https://img.shields.io/badge/pod-0.1.0-blue.svg)](https://cocoapods.org/pods/CountriesViewController) [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://cocoapods.org/pods/CountriesViewController) [![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)](https://cocoapods.org/pods/InAppNotify) [![Swift3](https://img.shields.io/badge/swift3-compatible-brightgreen.svg)](https://cocoapods.org/pods/InAppNotify)
+[![Version](https://img.shields.io/badge/pod-0.1.1-blue.svg)](https://cocoapods.org/pods/CountriesViewController) [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://cocoapods.org/pods/CountriesViewController) [![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)](https://cocoapods.org/pods/InAppNotify) [![Swift3](https://img.shields.io/badge/swift3-compatible-brightgreen.svg)](https://cocoapods.org/pods/InAppNotify)
 
 Usually during development i have a needed to select a country from list, this simple controller enable you to display a countries list, in a current locale language, and select them. Choose CountriesViewController for your next project, I'll be happy to give you a little help!
 
