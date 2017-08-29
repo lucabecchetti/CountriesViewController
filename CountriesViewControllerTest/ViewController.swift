@@ -10,8 +10,13 @@ import UIKit
 
 class ViewController: UIViewController,CountriesViewControllerDelegate {
 
+    @IBOutlet weak var singleSelection: UISwitch!
+    @IBOutlet weak var results: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        results.text = ""
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,10 +36,10 @@ class ViewController: UIViewController,CountriesViewControllerDelegate {
         countriesViewController.majorCountryLocaleIdentifiers = ["GB", "US", "IT", "DE", "RU", "BR", "IN"]
         
         /// Set initial selected
-        countriesViewController.selectedCountries = Countries.countriesFromCountryCodes(["AL"])
+        //countriesViewController.selectedCountries = Countries.countriesFromCountryCodes(["AL"])
         
         /// Allow or disallow multiple selection
-        countriesViewController.allowMultipleSelection = false
+        countriesViewController.allowMultipleSelection = !singleSelection.isOn
         
         /// Set delegate
         countriesViewController.delegate = self
@@ -48,27 +53,29 @@ class ViewController: UIViewController,CountriesViewControllerDelegate {
     
     func countriesViewController(_ countriesViewController: CountriesViewController, didSelectCountries countries: [Country]) {
         
+        var res = ""
         countries.forEach { (co) in
-            print(co.name)
+            res = res + co.name + "\n";
         }
+        results.text = res
         
     }
 
     func countriesViewControllerDidCancel(_ countriesViewController: CountriesViewController) {
         
-        print("user hass been tap cancel")
+        results.text = "user hass been tap cancel\n"
         
     }
     
     func countriesViewController(_ countriesViewController: CountriesViewController, didSelectCountry country: Country) {
         
-        print(country.name+" selected")
+        results.text = country.name+" selected\n"
         
     }
     
     func countriesViewController(_ countriesViewController: CountriesViewController, didUnselectCountry country: Country) {
         
-        print(country.name+" unselected")
+        results.text = country.name+" unselected\n"
         
     }
     

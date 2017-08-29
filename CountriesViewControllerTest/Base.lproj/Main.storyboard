@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,23 +22,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kaf-I1-adk">
-                                <rect key="frame" x="130" y="318" width="114" height="30"/>
-                                <state key="normal" title="Select Countries"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cC9-Wo-auB">
+                                <rect key="frame" x="159" y="319" width="109" height="30"/>
+                                <state key="normal" title="Single selection">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="launch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vJN-Er-cgC"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="g3C-OD-LMB">
+                                <rect key="frame" x="59" y="41" width="256" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="Z5F-nx-tei"/>
+                                    <constraint firstAttribute="height" constant="256" id="e9Y-Zh-dPb"/>
+                                </constraints>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O2m-Ov-LDl">
+                                <rect key="frame" x="85" y="318" width="51" height="31"/>
+                            </switch>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZXx-ox-ycC">
+                                <rect key="frame" x="16" y="417" width="343" height="230"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kaf-I1-adk">
+                                <rect key="frame" x="114" y="373" width="147" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Select Countries">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="launch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kVn-Q0-tFV"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.23202623426914215" green="0.47760716080665588" blue="0.68486583232879639" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="O2m-Ov-LDl" firstAttribute="top" secondItem="g3C-OD-LMB" secondAttribute="bottom" constant="21" id="9Fh-1b-roj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZXx-ox-ycC" secondAttribute="trailing" id="BYN-cQ-wkn"/>
+                            <constraint firstItem="g3C-OD-LMB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E88-FH-kCF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZXx-ox-ycC" secondAttribute="bottom" constant="20" id="F8o-bn-RTb"/>
+                            <constraint firstItem="ZXx-ox-ycC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FwC-yl-Fdn"/>
+                            <constraint firstItem="cC9-Wo-auB" firstAttribute="leading" secondItem="O2m-Ov-LDl" secondAttribute="trailing" constant="25" id="HDG-0W-oe2"/>
+                            <constraint firstItem="Kaf-I1-adk" firstAttribute="top" secondItem="cC9-Wo-auB" secondAttribute="bottom" constant="24" id="K7I-EY-vM7"/>
                             <constraint firstItem="Kaf-I1-adk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Svb-is-gY7"/>
-                            <constraint firstItem="Kaf-I1-adk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="r9U-T2-xUw"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ZXx-ox-ycC" secondAttribute="leading" id="UMO-0a-OY8"/>
+                            <constraint firstItem="cC9-Wo-auB" firstAttribute="top" secondItem="g3C-OD-LMB" secondAttribute="bottom" constant="22" id="ZDb-ua-nN9"/>
+                            <constraint firstItem="O2m-Ov-LDl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="69" id="a7L-kd-QCR"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ZXx-ox-ycC" secondAttribute="leading" id="e0f-lK-wfM"/>
+                            <constraint firstItem="ZXx-ox-ycC" firstAttribute="top" secondItem="Kaf-I1-adk" secondAttribute="bottom" constant="14" id="qxt-Wg-a3T"/>
+                            <constraint firstItem="g3C-OD-LMB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="rcE-du-XJr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="results" destination="ZXx-ox-ycC" id="gHc-aG-Gwr"/>
+                        <outlet property="singleSelection" destination="O2m-Ov-LDl" id="gjR-id-sD3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="567" height="567"/>
+    </resources>
 </document>
