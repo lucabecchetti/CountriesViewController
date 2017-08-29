@@ -131,7 +131,7 @@ let countriesViewController = CountriesViewController()
 countriesViewController.majorCountryLocaleIdentifiers = ["GB", "US", "IT", "DE", "RU", "BR", "IN"]
         
 /// Set initial selected countries
-//countriesViewController.selectedCountries = Countries.countriesFromCountryCodes(["AL"])
+countriesViewController.selectedCountries = Countries.countriesFromCountryCodes(["AL"])
         
 /// Allow or disallow multiple selection
 countriesViewController.allowMultipleSelection = true
