@@ -23,7 +23,7 @@ Usually during development i have a needed to select a country from list, this s
 ## Requirements
 
   - iOS 9+
-  - swift 3.0
+  - swift 4.0
   
 ## Main features
 Here's a highlight of the main features you can find in CountriesViewController:
